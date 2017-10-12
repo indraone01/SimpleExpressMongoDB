@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1=title
+    p
+        button#homebtn(type="button",onclick="location=location.origin+'/userlist'") Home
+
+    form#formAddUser(name="adduser",method="POST",action="#{action}")
+        table 
+            tr
+                td#td(colspan="2")
+                    input#inputUserName(type="text",placeholder="Username",name="username",value="#{username}",required)
+                    input#inputHiddenId(type="hidden",name="hiddenid",value="#{hiddenid}")
+            tr
+                td#td(colspan="2")
+                    input#inputUserEmail(type="email",placeholder="Email",name="useremail",value="#{useremail}",required)
+            tr 
+                td
+                    button#buttonSubmit(type="submit") Save
+                td 
+                    button#buttonReset(type="button",onclick="document.getElementsByName('hiddenid')[0].value='';document.getElementsByName('username')[0].value='';document.getElementsByName('useremail')[0].value='';") Cancel

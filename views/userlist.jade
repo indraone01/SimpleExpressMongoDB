@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    h1.
+        User List
+    p
+        button#addbtn(type="button",onclick="location=location.origin+'/newuser'") Add
+    p
+        input#searchtext(type="text",placeholder="search text",name="searchtxt",onkeydown="if(event.keyCode==13){document.getElementsByName('btnsearch')[0].click();}")
+        button#searchbtn(type="button",name="btnsearch",onclick="location=location.origin+'/userlist/'+document.getElementsByName('searchtxt')[0].value") Search
+    ol
+        each user, i in userlist
+            li 
+                table#table(cellpadding=0,cellspacing=0)
+                    tr
+                        td
+                            a(href="mailto:#{user.email}")=user.username
+                        td
+                            &nbsp;   
+                        td
+                            a(href="mailto:#{user.email}")=user.email
+                        td
+                            &nbsp;                     
+                        td 
+                            a(href="/newuser/#{user._id}",style="cursor:hand")="Edit"
+                        td
+                            &nbsp;
+                        td
+                            a(href="/deleteuser/#{user._id}",style="cursor:hand")="Delete"

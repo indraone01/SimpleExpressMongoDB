@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1.
+        Deleting User
+    p
+        "Data with id #{id} was deleted sucessfully!"
+    script="setTimeout(location=location.origin+'/userlist',1000)"
