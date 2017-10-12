@@ -1,6 +1,6 @@
 # NodejsMonkMongoDB
 
-Simple demonstration CRUD of MongoDB implementation with Monk.
+Simple CRUD demonstration of MongoDB implementation with Monk.
 
 Note:
 
