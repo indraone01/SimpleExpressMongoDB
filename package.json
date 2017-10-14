@@ -21,6 +21,10 @@
         "serve-favicon": "^2.4.5"
     },
     "description": "contact express application to managing contact information and sending email",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/indraone01/SimpleExpressMongoDB.git"
+    },
     "main": "app.js",
     "devDependencies": {
         "nodemon": "^1.12.1"
